@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/star-tracker-app/static/css/main.9413fd52.css",
+    "main.js": "/star-tracker-app/static/js/main.552accb8.js",
+    "index.html": "/star-tracker-app/index.html",
+    "main.9413fd52.css.map": "/star-tracker-app/static/css/main.9413fd52.css.map",
+    "main.552accb8.js.map": "/star-tracker-app/static/js/main.552accb8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9413fd52.css",
+    "static/js/main.552accb8.js"
+  ]
+}
