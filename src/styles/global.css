@@ -1,0 +1,131 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f9;
+  color: #333;
+}
+
+.app-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: #4a90e2;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* --- Child Card --- */
+.child-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.child-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+}
+
+.points-display span {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #f5a623;
+}
+
+/* --- Chore Item --- */
+.chore-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  transition: all 0.2s;
+}
+
+.chore-pending {
+  background-color: #fff;
+}
+
+.chore-completed {
+  background-color: #e6ffe6;
+  border-left: 5px solid #4CAF50;
+  opacity: 0.7;
+}
+
+.completion-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.chore-pending .completion-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.chore-completed .completion-btn {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* --- Rewards Card --- */
+.rewards-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.reward-card {
+    padding: 15px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.redeemable {
+    background-color: #e8f9ff;
+    border: 1px solid #00bfff;
+}
+
+.locked {
+    background-color: #f9f9f9;
+    border: 1px dashed #ccc;
+    opacity: 0.6;
+}
+
+.redeem-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.redeemable .redeem-btn {
+    background-color: #ff9800;
+}
+
+.locked .redeem-btn {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
