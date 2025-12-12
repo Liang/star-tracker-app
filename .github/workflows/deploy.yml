@@ -32,4 +32,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build # Tells the action to upload the contents of the 'build' folder
-          cname: star-tracker-app.github.io # Optional: Set to your project homepage URL
+          cname: liang.github.io # Optional: Set to your project homepage URL
