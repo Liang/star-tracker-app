@@ -1,0 +1,35 @@
+name: Deploy React App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Trigger the workflow when changes are pushed to the main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      
+      # 1. Setup Node.js Environment
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 2. Install Dependencies (npm install)
+      - name: Install Dependencies
+        run: npm install
+        
+      # 3. Build the Application (npm run build)
+      - name: Build Application
+        run: npm run build
+        
+      # 4. Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build # Tells the action to upload the contents of the 'build' folder
+          cname: star-tracker-app.github.io # Optional: Set to your project homepage URL
