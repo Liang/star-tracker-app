@@ -1,34 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 
-// --- INITIAL DATA STRUCTURE ---
-const initialData = [
-    {
-        id: 1,
-        name: "Liam",
-        points: 450,
-        tasks: [
-            { id: 'c1', name: "Make Bed", value: 10, isCompleted: false },
-            { id: 'c2', name: "Read for 20 mins", value: 20, isCompleted: false },
-        ],
-        rewards: [
-            { id: 'r1', name: "Extra 30 mins Screen Time", cost: 100 },
-            { id: 'r2', name: "Choose Dinner for the Family", cost: 300 },
-        ]
-    },
-    {
-        id: 2,
-        name: "Ella",
-        points: 820,
-        tasks: [
-            { id: 'c3', name: "Tidy Desk", value: 15, isCompleted: false },
-            { id: 'c4', name: "Brush Teeth (Behavior)", value: 5, isCompleted: false },
-        ],
-        rewards: [
-            { id: 'r3', name: "New Book", cost: 500 },
-        ]
-    }
-];
-
 const TrackerContext = createContext();
 
 export const TrackerProvider = ({ children }) => {
