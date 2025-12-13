@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/star-tracker-app/static/css/main.9413fd52.css",
-    "main.js": "/star-tracker-app/static/js/main.36dcf0f3.js",
+    "main.js": "/star-tracker-app/static/js/main.6f559d31.js",
     "index.html": "/star-tracker-app/index.html",
     "main.9413fd52.css.map": "/star-tracker-app/static/css/main.9413fd52.css.map",
-    "main.36dcf0f3.js.map": "/star-tracker-app/static/js/main.36dcf0f3.js.map"
+    "main.6f559d31.js.map": "/star-tracker-app/static/js/main.6f559d31.js.map"
   },
   "entrypoints": [
     "static/css/main.9413fd52.css",
-    "static/js/main.36dcf0f3.js"
+    "static/js/main.6f559d31.js"
   ]
 }
