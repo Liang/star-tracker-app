@@ -1,6 +1,7 @@
-// src/views/SettingsPage.js
+// src/views/SettingsPage.js - UPDATED for Back-to-Dashboard Functionality
 
 import React, { useState } from 'react';
+// These three imports are necessary for the rendering logic below
 import ChildEditor from './ChildEditor';
 import TaskEditor from './TaskEditor';
 import RewardEditor from './RewardEditor';
@@ -13,12 +14,14 @@ const EDITOR_VIEWS = {
     MAIN: 'main'
 };
 
-const SettingsPage = () => {
+// Component receives the 'onBack' function from Dashboard.js
+const SettingsPage = ({ onBack }) => {
     const [currentView, setCurrentView] = useState(EDITOR_VIEWS.MAIN);
 
     const renderEditor = () => {
         switch (currentView) {
             case EDITOR_VIEWS.CHILDREN:
+                // Note: The editors themselves have a back button to return to the MAIN settings menu
                 return <ChildEditor onBack={() => setCurrentView(EDITOR_VIEWS.MAIN)} />;
             case EDITOR_VIEWS.TASKS:
                 return <TaskEditor onBack={() => setCurrentView(EDITOR_VIEWS.MAIN)} />;
@@ -45,6 +48,11 @@ const SettingsPage = () => {
 
     return (
         <div className="settings-page">
+            {/* THIS BUTTON USES THE 'onBack' PROP to switch the state in Dashboard.js */}
+            <button className="back-to-dashboard-btn" onClick={onBack}>
+                ← Back to Dashboard
+            </button>
+            
             {renderEditor()}
         </div>
     );

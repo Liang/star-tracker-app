@@ -22,7 +22,7 @@ const Dashboard = () => {
 
     // Conditional render: If settings is open, show the settings page only.
     if (isSettingsOpen) {
-        return <SettingsPage />;
+        return <SettingsPage onBack={() => setIsSettingsOpen(false)} />;
     }
 
     // If we reach this point, settings is NOT open, so we render the dashboard.
