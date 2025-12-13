@@ -13,6 +13,21 @@ const EDITOR_VIEWS = {
     MAIN: 'main'
 };
 
+// Add onBack to the function argument list
+const SettingsPage = ({ onBack }) => { 
+    // ... inside renderEditor() ...
+
+    return (
+        <div className="settings-page">
+            {/* ADD A BACK BUTTON AT THE TOP OF THE SETTINGS PAGE */}
+            <button className="back-to-dashboard-btn" onClick={onBack}>
+                ← Back to Dashboard
+            </button>
+            {renderEditor()}
+        </div>
+    );
+};
+
 const SettingsPage = () => {
     const [currentView, setCurrentView] = useState(EDITOR_VIEWS.MAIN);
 
