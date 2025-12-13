@@ -1,6 +1,8 @@
 import React from 'react';
 import Dashboard from './views/Dashboard';
+import LoginScreen from './views/LoginScreen';
 import { TrackerProvider } from './context/TrackerContext';
+import { AuthProvider, useAuth } from './context/AuthContext';
 
 function App() {
   return (
